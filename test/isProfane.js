@@ -31,5 +31,10 @@ describe('filter', function(){
 			});
 			assert(filter.isProfane('test'));
 		});
+
+		it('Should not count "hello" as profane if it is in the exceptions list', function() {
+			var filter = new Filter();
+			assert(!filter.isProfane('hello'));
+		})
 	});
 });
